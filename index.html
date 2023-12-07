@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avalanche 2</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+
+    <script src="https://p5play.org/v3/p5play.js"></script>
+    <script src="https://p5play.org/v3/planck.min.js"></script>
+    
+  </head>
+
+ 
+<body onload="onOpen()">
+  <div id="gameScreen">
+    <script src="sketch.js"></script>
+  </div>
+  <div id="startScreen">
+      <h1 id="mainTitle">Avalanche 2</h1>
+      <button class="buttons" onClick="startButton()">Play</button>
+      <br>
+      <button class="buttons" onClick="rulesButton()">Rules</button>
+      <br>
+      <button class="buttons" onClick="charButton()">Character Select</button>
+      <br>
+  </div>
+  <div id="ruleScreen">
+    <h2>How To Play</h2>
+    <p id="instructions">
+    <br>
+    <p id="textA"> At the start of the game the ball appears on one of the platforms you control.</p>
+    <br>
+    <p id="textB"> With the left and right arrow keys, change the angle of the platform to move the ball around.</p>
+    <br>
+    <p id="textC"> Try your best to keep the ball from hitting the edge of the screen as long as you can.</p>
+    </p>
+    <button id="homeButton" class="buttons" onClick="homeButton()">Main Menu</button>
+  </div>
+  <div id="endScreen">
+    <h2 class="finalScore"></h2>
+    <h3 class="highScores"></h3>
+    <!-- <button id="resetScores" class="buttons" onClick="resetHighScores()">Reset Scores</button>
+    <br> -->
+    <button id="restart" class="buttons" onClick="startButton()">Try Again</button>
+    <br>
+    <button id="homeButton" class="buttons" onClick="homeButton()">Main Menu</button>
+    <br>
+  </div>
+  
+  <div id="selectScreen">
+    <h2>Choose A Theme</h2>
+    <br>
+    <img id="beachball" src="assets/beachball-highres.png" onclick="ballButton1()" alt="beachball">
+    <img id="snowball" src='assets/snowball-highres.png' onclick="ballButton2()" alt="snowball">
+    <img id="fireball" src='assets/fireball-highres.png' onclick="ballButton3()" alt="fireball">
+    <br>
+    <p id="diff1" class="diffs">Difficulty: Easy</p>
+    <br>
+    <p id="diff2" class="diffs">Difficulty: Medium</p>
+    <br>
+    <p id="diff3" class="diffs">Difficulty: Hard</p>
+    <br>
+    <button id="ballButton1" class="buttons" onClick="ballButton1()">Beach Ball</button>
+    <button id="ballButton2" class="buttons" onClick="ballButton2()">Snowball</button>
+    <button id="ballButton3" class="buttons" onClick="ballButton3()">Fireball</button>
+    <br>
+    <button id="homePage" class="buttons" onClick="homeButton()">Main Menu</button>
+    <br>
+  </div>
+  <p id="p5_loading" class="loadingclass"></p>
+</body>
+</html>
